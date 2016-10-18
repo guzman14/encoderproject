@@ -1,12 +1,14 @@
-$("#divname").keydown(function(e) {
-  //code to execute when user presses a key goes here
+$("#inputArea").keydown(function(e) {
+  if(e.keyCode == 13) {
+    $("#textArea").append(document.getElementById('inputText').value += " ");
+    document.getElementById('inputText').value = "";
 }
-
-$("input[type='radio']").______(function() {
-  $("input:checked").prop('checked', ______);
-  $(this).prop('checked', _____);
 });
+var letters = {
+66:"b"
+};
 
-if ($("input:checked").val() == "echo") {
-  //code here
-}
+  $("#inputArea").keydown(function(e) {
+      var inputText = document.getElementById("inputText").value;
+   document.getElementById("textArea").innerHTML = inputText;
+});
