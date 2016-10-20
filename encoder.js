@@ -30,4 +30,9 @@ var letters = {
 
   }
   $("#textArea").append(" ");
-   }
+  }
+  
+
+   else if ($("input:checked").val() == "heiro") {
+
+   var ex = document.getElementById('inputText').value;
