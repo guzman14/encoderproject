@@ -27,6 +27,7 @@ var letters = {
     console.log(z);
     $("#textArea").append(caeserConvert[z]);
     document.getElementById('inputText').value = "";
-    //loops through conversion and outputs each character individually
 
   }
+  $("#textArea").append(" ");
+   }
