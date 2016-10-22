@@ -3,10 +3,14 @@ $("input[type='radio']").click(function() {
   $(this).prop('checked', true);
 });
 
-  $("#inputArea").keydown(function(e) {
-      var inputText = document.getElementById("inputText").value;
-   document.getElementById("textArea").innerHTML = inputText;
-});
+$("#inputArea").keydown(function(e) {
+  if(e.keyCode == 13) {
+  if ($("input:checked").val() == "echo") {
+
+        $("#textArea").append(document.getElementById('inputText').value += " ");
+        document.getElementById('inputText').value = "";
+
+    }
 
   else if ($("input:checked").val() == "caesar") {
 
@@ -27,8 +31,32 @@ $("input[type='radio']").click(function() {
   $("#textArea").append(" ");
   }
 
+  else if ($("input:checked").val() == "heiro") {
 
+     var ex = document.getElementById('inputText').value;
 
-   else if ($("input:checked").val() == "heiro") {
+     var y = ex.length + 1;
 
-   var ex = document.getElementById('inputText').value;
+     var minus = x - 1;
+
+     for(var x = 0; x < y; x++) {
+       var minus = x - 1;
+       var q = ex.substring(minus, x);
+       var z = q.toLowerCase();
+       $("#textArea").append(heiroConvert[z]);
+ document.getElementById('inputText').value = "";
+     }
+     $("#textArea").append(" ");
+     }
+     };
+   });
+   $("#translationInputArea").keydown(function(e) {
+     if(e.keyCode == 13) {
+       var ex = document.getElementById('translationInputText').value;
+
+       var y = ex.length + 1;
+
+       var minus = x - 1;
+       for(var x = 0; x < y; x++) {
+         var minus = x - 1;
+         var q = ex.substring(minus, x);
