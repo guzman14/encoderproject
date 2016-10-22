@@ -1,12 +1,7 @@
-$("#inputArea").keydown(function(e) {
-  if(e.keyCode == 13) {
-    $("#textArea").append(document.getElementById('inputText').value += " ");
-    document.getElementById('inputText').value = "";
-}
+$("input[type='radio']").click(function() {
+  $("input:checked").prop('checked', false);
+  $(this).prop('checked', true);
 });
-var letters = {
-66:"b"
-};
 
   $("#inputArea").keydown(function(e) {
       var inputText = document.getElementById("inputText").value;
@@ -31,7 +26,8 @@ var letters = {
   }
   $("#textArea").append(" ");
   }
-  
+
+
 
    else if ($("input:checked").val() == "heiro") {
 
